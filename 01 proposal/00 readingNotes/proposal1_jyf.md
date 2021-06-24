@@ -31,21 +31,11 @@ At the peak of bitcoin transactions, users need to increase the transaction fee 
 
 Kumaresean and Bentov have studied how to use Bitcoin to motivate participants. There are four ways.
 
-- Verifiable computation. We consider a setting where a del- egator outsources computation to a worker who expects to get paid in return for delivering correct outputs. We design protocols that compile both public and private verification schemes to support incentivizations described above.
+- Verifiable computation. We consider a setting where a delegator outsources computation to a worker who expects to get paid in return for delivering correct outputs. We design protocols that compile both public and private verification schemes to support incentivizations described above.
 
-- Secure computation with restricted leakage. Building on the recent work of Huang et al. (Security and Privacy 2012), we show an efficient secure computation protocol that mone- tarily penalizes an adversary that attempts to learn one bit of information but gets detected in the process.
+- Secure computation with restricted leakage. Building on the recent work of Huang et al. (Security and Privacy 2012), we show an efficient secure computation protocol that monetarily penalizes an adversary that attempts to learn one bit of information but gets detected in the process.
 
-- Fair secure computation. Inspired by recent work, we con-
+- Fair secure computation. Inspired by recent work, we consider a model of secure computation where a party that aborts after learning the output is monetarily penalized. We then propose an ideal transaction functionality F⋆ and show a ML constant-round realization on the Bitcoin network. Then, in the F⋆ -hybrid world we design a constant round protocol for secure computation in this model.
 
-  sider a model of secure computation where a party that aborts
-
-  after learning the output is monetarily penalized. We then
-
-  propose an ideal transaction functionality F⋆ and show a ML
-
-  constant-round realization on the Bitcoin network. Then, in the F⋆ -hybrid world we design a constant round protocol
-
-  for secure computation in this model.
-
-- Noninteractivebounties.Weprovideformaldefinitionsand candidate realizations of noninteractive bounty mechanisms on the Bitcoin network which (1) allow a bounty maker to place a bounty for the solution of a hard problem by sending a single message, and (2) allow a bounty collector (unknown at the time of bounty creation) with the solution to claim the bounty, while (3) ensuring that the bounty maker can learn the solution whenever its bounty is collected, and (4) pre- venting malicious eavesdropping parties from both claiming the bounty as well as learning the solution.
+- Noninteractive bounties. We provide formal definitions and candidate realizations of noninteractive bounty mechanisms on the Bitcoin network which (1) allow a bounty maker to place a bounty for the solution of a hard problem by sending a single message, and (2) allow a bounty collector (unknown at the time of bounty creation) with the solution to claim the bounty, while (3) ensuring that the bounty maker can learn the solution whenever its bounty is collected, and (4) pre- venting malicious eavesdropping parties from both claiming the bounty as well as learning the solution.
 
