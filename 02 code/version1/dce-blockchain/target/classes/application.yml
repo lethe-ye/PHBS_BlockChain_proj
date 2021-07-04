@@ -1,0 +1,16 @@
+server:
+    port: 8080
+
+block:
+    ##设定哈希值前difficulty位都是0时,满足计算结果
+    difficulty: 4
+    ##当前节点p2pserver端口号
+    p2pport: 7020
+    ##要连接的节点地址
+    address: https://127.0.0.1:7021
+#        - https://127.0.0.1:7023
+
+#kpSeed:
+#    # 保证每次生成的keypair是一样的
+#    seedGenesis: 123
+#    seedMiner: 1230

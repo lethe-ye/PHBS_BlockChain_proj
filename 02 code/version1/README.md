@@ -1,0 +1,6 @@
+byte[] hash;
+
+PublicKey minerAddress;
+
+
+
