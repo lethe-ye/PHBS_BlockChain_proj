@@ -1,4 +1,10 @@
-# 更改的部分--Lethe
+# 更改的部分-- Version1
+
+@author Lethe
+
+**请看Version2 orz 谢谢**
+
+这里对于blockHash和publicKey的修改没有用！
 
 ## Transaction
 
@@ -88,4 +94,20 @@ byte[] newBlockHash;
 // 创建新的区块
 Block block = blockService.createNewBlock(nonce, blockCache.getLatestBlock().getHash(), tsaList, newBlockHash);
 ```
+
+
+
+# Version2
+
+@author Lethe
+
+## 变量类型更改！！hash和minerAdd
+
+为了展示方便，这里把blockHash还是改为了String类型，minerAddress也是String（之前是byte[], PublicKey）
+
+为了让每次运行这个程序的时候minerAddress都是一样的（按理说一个account就是一个固定的keyPair，我们加入blackList的也是这个keyPair的publicKey），我们直接在`application.yml`文件里加入一个配置`address`其下有`mineradd`和`genesisadd`代表这个miner的address（方便起见直接设置一个String比如minderN1，每个矿工的不一样呢）以及创世区块的miner（中本聪大哥）的address（这里每个矿工的都是一样的）
+
+## Chrome JSONView 插件
+
+可以直接用这个插件，把blockChain的信息变成JSON，预览版本在这里
 

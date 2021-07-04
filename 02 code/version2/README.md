@@ -1,0 +1,3 @@
+String hash;
+
+String minerAddress;
