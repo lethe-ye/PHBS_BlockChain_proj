@@ -111,3 +111,8 @@ Block block = blockService.createNewBlock(nonce, blockCache.getLatestBlock().get
 
 可以直接用这个插件，把blockChain的信息变成JSON，预览版本在这里
 
+# selfMine
+
+在最原版的ref的基础上修改的
+
+实现selfishMining的策略了！！！
