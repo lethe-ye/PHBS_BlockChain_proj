@@ -14,7 +14,7 @@
 
 ## application.yml
 
-```
+```yml
 server:
     port: 8080
 
