@@ -1,0 +1,27 @@
+server:
+    port: 8080
+
+block:
+    ## 设定哈希值前difficulty位都是0时,满足计算结果
+    difficulty: 4
+    ## 当前节点p2p server端口号
+    p2pport: 7020
+    ## 要连接的正常节点地址
+    address: https://10.2.96.237:7020,https://10.2.98.173:7020,https://10.2.82.101:7020,https://10.2.82.56:7020
+    ## 是否自私挖矿
+    selfish: false
+    ## 要连接的自私节点地址
+    selfishAddress: https://10.2.96.237:7020
+
+address:
+    ## 我的ID
+    mineradd: Lethe
+    ## 创世区块的ID
+    genesisadd: Genesis
+    ## 黑名单（不接受其区块）
+    blacklist: SunBo
+    ## 白名单（一起自私挖矿的ID），只有block.selfish为true时有用
+    whitelist: SunBo
+
+
+

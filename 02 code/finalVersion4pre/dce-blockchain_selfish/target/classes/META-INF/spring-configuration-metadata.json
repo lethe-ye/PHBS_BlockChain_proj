@@ -1,0 +1,66 @@
+{
+  "groups": [
+    {
+      "name": "address",
+      "type": "com.dce.blockchain.web.service.PowService",
+      "sourceType": "com.dce.blockchain.web.service.PowService"
+    },
+    {
+      "name": "block",
+      "type": "com.dce.blockchain.web.util.BlockCache",
+      "sourceType": "com.dce.blockchain.web.util.BlockCache"
+    }
+  ],
+  "properties": [
+    {
+      "name": "block.address-list",
+      "type": "java.util.List<java.lang.String>",
+      "description": "要连接的节点地址",
+      "sourceType": "com.dce.blockchain.web.util.BlockCache"
+    },
+    {
+      "name": "block.block-chain",
+      "type": "java.util.List<com.dce.blockchain.web.model.Block>",
+      "description": "当前节点的区块链结构",
+      "sourceType": "com.dce.blockchain.web.util.BlockCache"
+    },
+    {
+      "name": "block.difficulty",
+      "type": "java.lang.Integer",
+      "description": "挖矿的难度系数",
+      "sourceType": "com.dce.blockchain.web.util.BlockCache",
+      "defaultValue": 0
+    },
+    {
+      "name": "block.p2pport",
+      "type": "java.lang.Integer",
+      "description": "当前节点p2pserver端口号",
+      "sourceType": "com.dce.blockchain.web.util.BlockCache",
+      "defaultValue": 0
+    },
+    {
+      "name": "block.packed-transactions",
+      "type": "java.util.List<com.dce.blockchain.web.model.Transaction>",
+      "description": "已打包保存的业务数据集合",
+      "sourceType": "com.dce.blockchain.web.util.BlockCache"
+    },
+    {
+      "name": "block.selfish-address-list",
+      "type": "java.util.List<java.lang.String>",
+      "description": "要连接的自私节点地址",
+      "sourceType": "com.dce.blockchain.web.util.BlockCache"
+    },
+    {
+      "name": "block.selfish-sockets-list",
+      "type": "java.util.List<org.java_websocket.WebSocket>",
+      "sourceType": "com.dce.blockchain.web.util.BlockCache"
+    },
+    {
+      "name": "block.sockets-list",
+      "type": "java.util.List<org.java_websocket.WebSocket>",
+      "description": "当前节点的socket对象",
+      "sourceType": "com.dce.blockchain.web.util.BlockCache"
+    }
+  ],
+  "hints": []
+}

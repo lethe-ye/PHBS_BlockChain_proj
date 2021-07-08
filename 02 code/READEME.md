@@ -1,3 +1,52 @@
+# finalVersion4pre
+
+这是我们最终pre的版本，实现功能
+
+- difficulty level：前面多少个0，demo方便设置为4
+- scan：展示整个block chain
+- create：创世区块，这个miner永远是Genesis，所以谁create无所谓
+
+- mining：可以一直挖矿，目前设置是30s
+- selfishMing：一直自私挖矿，目前设置是30s
+  - 可以拉人入伙一起selfish mining，你们之间信息是共享的
+- reset：直接清空chain上内容，不用大家一起重新启动code了
+- display：只显示目前每个block的高度和mineradd
+
+## application.yml
+
+```
+server:
+    port: 8080
+
+block:
+    ## 设定哈希值前difficulty位都是0时,满足计算结果
+    difficulty: 4
+    ## 当前节点p2p server端口号
+    p2pport: 7020
+    ## 要连接的正常节点地址
+    address: https://10.2.96.237:7020,https://10.2.98.173:7020,https://10.2.82.101:7020,https://10.2.82.56:7020
+    ## 是否自私挖矿
+    selfish: false
+    ## 要连接的自私节点地址
+    selfishAddress: https://10.2.96.237:7020
+
+address:
+    ## 我的ID
+    mineradd: Lethe
+    ## 创世区块的ID
+    genesisadd: Genesis
+    ## 黑名单（不接受其区块）
+    blacklist: SunBo
+    ## 白名单（一起自私挖矿的ID），只有block.selfish为true时有用
+    whitelist: SunBo
+```
+
+address--mineradd修改成自己的名字（按理说应该是publicKey之类的，为了demo展示的方便，直接用String表示）
+
+blacklist：如果有想屏蔽的人的block，那么就把这个人的mineradd加进来
+
+whitelist：如果你想和别人一起selfish mine，把这个人的mineradd加进来
+
 # 更改的部分-- Version1
 
 @author Lethe
@@ -116,3 +165,6 @@ Block block = blockService.createNewBlock(nonce, blockCache.getLatestBlock().get
 在最原版的ref的基础上修改的
 
 实现selfishMining的策略了！！！
+
+
+
