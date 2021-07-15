@@ -1,3 +1,7 @@
+# final0715
+
+这里我们对于selfish mining的策略进行了进一步的修改，优化了该策略的reward
+
 # finalVersion4pre
 
 这是我们最终pre的版本，实现功能
